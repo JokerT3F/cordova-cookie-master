@@ -35,6 +35,7 @@ public class CookieMaster extends CordovaPlugin {
                         String cookieValue = "";
 
                         for (int i = 0; i < cookies.length; i++) {
+   			    Log.v(TAG, cookies[i]);
                             if (cookies[i].contains(cookieName + "=")) {
                                 cookieValue = cookies[i].split("=")[1].trim();
                                 break;

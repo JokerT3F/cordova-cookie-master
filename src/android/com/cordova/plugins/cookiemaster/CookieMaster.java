@@ -89,14 +89,8 @@ public class CookieMaster extends CordovaPlugin {
 
             CookieManager cookieManager = CookieManager.getInstance();
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
 			    cookieManager.removeAllCookies();
 			    cookieManager.flush();
-			} else
-			{
-			    cookieManager.removeAllCookie();
-			    cookieManager.removeSessionCookie();
-			}
 
 			callbackContext.success();
             return true;

@@ -89,7 +89,7 @@ public class CookieMaster extends CordovaPlugin {
 
             CookieManager cookieManager = CookieManager.getInstance();
 
-			    cookieManager.removeAllCookies();
+			    cookieManager.removeAllCookies(null);
 			    cookieManager.flush();
 
 			callbackContext.success();
